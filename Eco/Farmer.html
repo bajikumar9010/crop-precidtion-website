@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        body{
+             background:linear-gradient(rgba(146, 118, 7, 0.7),rgba(28, 230, 162, 0.7)) , url(login.jpg ), no-repeat;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background:linear-gradient(rgba(146, 118, 7, 0.7),rgba(28, 230, 162, 0.7)) , url( Logo.jpeg), no-repeat;
+            width: 400px;
+            height: 500px;
+            margin: auto;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: rgba(205, 126, 126, 0.25) 0px 54px 55px, rgba(220, 11, 11, 0.12) 0px -12px 30px, rgba(60, 255, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        p {
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 30px;
+        }
+        #submit {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        input {
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 40px;
+            margin-bottom: 40px;
+            border: 1px solid grey;        
+            border-radius: 8px;
+        }
+        #msg {
+            text-align: center;
+        }
+        .abc {
+            padding-left: 10px;
+        }
+        h2
+        {
+            color:rgb(150, 241, 5);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgb(235, 238, 235);
+            display: block;
+            margin: auto;
+            width: 25%;
+            height: 30px;
+            margin-bottom: 40px;
+            border: 1px solid grey;        
+            border-radius: 15px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style=" color:rgb(197, 167, 194)"> WELCOME TO CROP PRECITIOR SIGN IN  PAGE</h1>
+        <form>
+            <h2>SIGN IN</h2>
+            <p>Email</p>
+            <input class="abc" id="email" type="email" placeholder="Enter E-mail">
+            <p>Password</p>
+            <input class="abc" id="password" type="password" placeholder="Enter Password">
+          <center><button><a href=""D:\Eco\Farmerpage.html"></a>Submit</button></center>
+            <p id="msg">Don't have an account? <a href="D:\Eco\Register.html">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    let myform = document.querySelector("form");
+
+    myform.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        let signupdata = JSON.parse(localStorage.getItem("signup")) || [];
+        let found = false;
+        signupdata.filter((element) => {
+            if(myform.email.value==element.email) {
+                if(myform.password.value==element.password) {
+                    let name = {name : element.name};
+                    let signin = JSON.parse(localStorage.getItem("signin")) || [];
+                    signin.push(name);
+                    localStorage.setItem("signin", JSON.stringify(signin));
+                    found = true;
+                }
+            } 
+        });
+        if (found == true) {
+            alert ("Sign in Successfully.");
+            window.location.href = "Farmerpage.html";
+        } else {
+            alert ("Wrong Credentials.");
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Text Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(rgba(241, 249, 240, 0.774),rgba(231, 161, 11, 0.728));
+          
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .text {
+            flex: 1;
+            background:linear-gradient(rgba(241, 249, 240, 0.774),rgba(88, 242, 5, 0.728));
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(36, 148, 197, 0.2);
+            border-radius: 5px;
+        }
+
+        .text h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .text p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        footer {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      background-color: green;
+      padding: 30px;
+      font-weight: bold;
+    }
+    footer p {
+      margin: 0;
+      color: black;
+      font-size: 14px;
+    }
+    
+    footer a {
+      color: black;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.heading span{
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: .3rem 2rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .5rem 2.5rem;
+    font-size:1.5rem ;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+.header{
+    position: fixed;
+    top:0;left:0;right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--green);
+}
+.header .logo i{
+    color:var(--green)
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+}
+button.homebutton
+
+{
+    background:linear-gradient(rgba(241, 249, 240, 0.774),rgba(0, 0, 0, 0.728));
+    align-items: left;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"> </i>  </a><B STYLE="COLOR:GREEN  ">AGRIHUB</B>
+    </header>
+    <div class="container">
+        <div class="image">
+            <img src="https://media.istockphoto.com/id/950039636/vector/about-us-flat-design-orange-round-vector-icon-in-eps-10.jpg?s=612x612&w=0&k=20&c=3eXs5SjFq4TWTIi7zoWifTn9q4xulmyB53dyuPP4ypg="   width="100%"height="100%">
+        </div>
+        <div class="text">
+            <h2>Welcome to Our <b STYLE="COLOR:GREEN  ">AGRIHUB</b></h2>
+            Our website serves as a pioneering platform that bridges the gap between farmers and buyers, revolutionizing the way fresh crops are brought from the fields to your table. For farmers, it provides a user-friendly space to display their diverse range of crops, complete with details about quality, quantity, and cultivation methods. This enables them to reach a wider customer base and secure fair prices for their produce.
+            <br>
+            Buyers, on the other hand, benefit from a direct channel to access farm-fresh goods without the need for intermediaries. They can browse an extensive catalog of crops, making informed choices based on specific preferences, certifications, and even the region of cultivation.
+            <div class="social-icons">
+                <a href="#"><img src="https://images.template.net/76793/Instagram-Logo-Black-And-White-Vector.jpg" width="80" height="80" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn3d.iconscout.com/3d/free/preview/facebook-4293532-3569959@0.png?f=webp&h=700"  width="80" height="80"alt="Facebook"></a>
+                <a href="#"><img src="https://images.moneycontrol.com/static-mcnews/2023/07/Collage-Maker-24-Jul-2023-03-05-PM-4262.jpg?impolicy=website&width=1600&height=900"  width="80" height="80" alt="Twitter"></a>
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <div>
+        <button id="homeButton" color="white"> Home Page</button>
+        
+         <style>
+
+#homeButton {
+  position: fixed;
+  bottom: 90px;
+  right: 0px;
+background:linear-gradient(rgba(241, 249, 240, 0.774),rgba(231, 161, 11, 0.728));
+box-sizing: border-box;
+
+}
+</style>
+        
+        <script>
+           
+            var homeButton = document.getElementById("homeButton");
+          
+          
+            homeButton.addEventListener("click", function() {
+                
+                window.location.href = "farmerpage.html";
+             
+                
+    
+            });
+        </script>
+        </div>
+      
+
+  </div>
+
+    
+
+
+
+
+
+   
+</body>
+</html>
